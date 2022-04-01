@@ -1,7 +1,7 @@
 # Description
 This is a bash script intended to install ATNF's Miriad radio interferometry data reduction package (https://www.atnf.csiro.au/computing/software/miriad/) and Duchamp source finder (https://www.atnf.csiro.au/people/Matthew.Whiting/Duchamp/), along with their pre-requisites.  
 
-# Note:
+# Notes
 * Sudo access is required as the softwares will be installed in the `/usr/local` folder. Therefore, this is only suitable for personal machines. You may try to modify the INSTALLDIR variable, but do so at your own risk.
 * Internet access is required to download the source codes. 
 * The script can be placed anywhere in the machine, and source codes will be downloaded in the same folder. 
