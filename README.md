@@ -14,7 +14,7 @@ This is a bash script intended to install ATNF's Miriad radio interferometry dat
 * Duchamp https://www.atnf.csiro.au/people/Matthew.Whiting/Duchamp/
 * RPFITS https://www.atnf.csiro.au/computing/software/rpfits.html
 * WCSLIB https://www.atnf.csiro.au/people/mcalabre/WCS/wcslib/
-~~* Karma https://www.atnf.csiro.au/computing/software/karma/~~
+* ~~Karma https://www.atnf.csiro.au/computing/software/karma/~~
 * CFITSIO https://heasarc.gsfc.nasa.gov/fitsio/
 * Other modules: 
   * `pgplot5`
