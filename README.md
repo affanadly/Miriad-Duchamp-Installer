@@ -14,7 +14,7 @@ This is a bash script intended to install ATNF's Miriad radio interferometry dat
 * Duchamp https://www.atnf.csiro.au/people/Matthew.Whiting/Duchamp/
 * RPFITS https://www.atnf.csiro.au/computing/software/rpfits.html
 * WCSLIB https://www.atnf.csiro.au/people/mcalabre/WCS/wcslib/
-* Karma https://www.atnf.csiro.au/computing/software/karma/
+~~* Karma https://www.atnf.csiro.au/computing/software/karma/~~
 * CFITSIO https://heasarc.gsfc.nasa.gov/fitsio/
 * Other modules: 
   * `pgplot5`
@@ -45,11 +45,11 @@ This is a bash script intended to install ATNF's Miriad radio interferometry dat
    ```
 3. Make the installer script an executable using
    ```
-   chmod u+x installer.sh
+   chmod u+x install.sh
    ```
 4. Run the script using
    ```
-   ./installer.sh
+   ./install.sh
    ```
    Note: You may need to enter your password here for sudo privileges.
 5. If there are no errors and you see the message 
