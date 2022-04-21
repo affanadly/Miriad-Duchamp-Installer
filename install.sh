@@ -12,16 +12,16 @@ wget -nc ftp://ftp.atnf.csiro.au/pub/software/rpfits/rpfits-2.25.tar.gz
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/wcslib/wcslib-7.7.tar.bz2
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/miriad/miriad-code.tar.bz2
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/miriad/miriad-common.tar.bz2
-wget -nc ftp://ftp.atnf.csiro.au/pub/software/karma/karma-1.7.25-amd64_Linux_libc6.3.tar.bz2
-wget -nc ftp://ftp.atnf.csiro.au/pub/software/karma/karma-1.7.25-common.tar.bz2
+# wget -nc ftp://ftp.atnf.csiro.au/pub/software/karma/karma-1.7.25-amd64_Linux_libc6.3.tar.bz2
+# wget -nc ftp://ftp.atnf.csiro.au/pub/software/karma/karma-1.7.25-common.tar.bz2
 wget -nc https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-4.0.0.tar.gz
 wget -nc https://www.atnf.csiro.au/people/Matthew.Whiting/Duchamp/downloads/Duchamp-1.6.2.tar.gz
 
 echo "Unpacking source codes..."
 tar -zxvf rpfits-2.25.tar.gz
 tar -jxvf wcslib-7.7.tar.bz2
-tar -jxvf karma-1.7.25-amd64_Linux_libc6.3.tar.bz2
-tar -jxvf karma-1.7.25-common.tar.bz2
+# tar -jxvf karma-1.7.25-amd64_Linux_libc6.3.tar.bz2
+# tar -jxvf karma-1.7.25-common.tar.bz2
 tar -zxvf cfitsio-4.0.0.tar.gz
 tar -zxvf Duchamp-1.6.2.tar.gz
 
@@ -39,11 +39,11 @@ sudo mkdir /usr/local/share/man/man1
 sudo make install
 cd $HOMEDIRECTORY
 
-echo "Installing Karma..."
-sudo mv karma-1.7.25/amd64_Linux_libc6.3 $INSTALLDIR
-cd $INSTALLDIR
-sudo mv amd64_Linux_libc6.3 karma
-cd $HOMEDIRECTORY
+# echo "Installing Karma..."
+# sudo mv karma-1.7.25/amd64_Linux_libc6.3 $INSTALLDIR
+# cd $INSTALLDIR
+# sudo mv amd64_Linux_libc6.3 karma
+# cd $HOMEDIRECTORY
 
 echo "Installing Miriad..."
 sudo cp miriad-code.tar.bz2 $INSTALLDIR
@@ -78,7 +78,7 @@ sudo rm -r -f miriad-common.tar.bz2
 cd $HOMEDIRECTORY
 rm -r -f wcslib-7.7
 rm -r -f rpfits
-rm -r -f karma-1.7.25
+# rm -r -f karma-1.7.25
 rm -r -f cfitsio-4.0.0
 rm -r -f Duchamp-1.6.2
 
