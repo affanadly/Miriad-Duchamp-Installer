@@ -50,7 +50,7 @@ cd $HOMEDIRECTORY
 
 echo "Installing CFITSIO..."
 cd cfitsio-4.0.0
-./configure # --prefix=$INSTALLDIR/miriad/linux64
+./configure --prefix=$INSTALLDIR
 make
 sudo make install 
 cd $HOMEDIRECTORY
