@@ -73,6 +73,7 @@ rm -r -f Duchamp-1.6.2
 
 echo "Adding to PATH..."
 cat << EOF >> ~/.profile
+
 . $INSTALLDIR/miriad/MIRRC.sh
 export PATH=\$PATH:\$MIRBIN
 export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$MIRLIB
