@@ -75,6 +75,7 @@ echo "Adding to PATH..."
 cat << EOF >> ~/.profile
 . $INSTALLDIR/miriad/MIRRC.sh
 export PATH=\$PATH:\$MIRBIN
+export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$MIRLIB
 EOF
 
 echo "Installation complete. Run source ~/.profile or restart to use Miriad."
