@@ -19,7 +19,7 @@ cat << EOF >> ~/.profile
 . /usr/local/karma/.karmarc
 export KARMABASE=/usr/local/karma
 export PATH=\$PATH:\$KARMABASE/amd64_Linux_libc6.3/bin
-export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:$\KARMABASE/amd64_Linux_libc6.3/lib
+export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$KARMABASE/amd64_Linux_libc6.3/lib
 EOF
 
 echo "Installation complete. Run source ~/.profile or restart to use Karma."
