@@ -1,21 +1,22 @@
 # Miriad and Duchamp Installation Script
 
 ## Description
-This is a bash script intended to install ATNF's Miriad radio interferometry data reduction package (https://www.atnf.csiro.au/computing/software/miriad/) and Duchamp source finder (https://www.atnf.csiro.au/people/Matthew.Whiting/Duchamp/), along with their pre-requisites.  
+This is a bash script intended to install ATNF's Miriad radio interferometry data reduction package (https://www.atnf.csiro.au/computing/software/miriad/), Duchamp source finder (https://www.atnf.csiro.au/people/Matthew.Whiting/Duchamp/), and Karma (https://www.atnf.csiro.au/computing/software/karma/) along with their pre-requisites.  
 
 ## Notes
 * Sudo access is required as the softwares will be installed in the `/usr/local` folder. Therefore, this is only suitable for personal machines. You may try to modify the INSTALLDIR variable, but do so at your own risk.
 * Internet access is required to download the source codes. 
 * The script can be placed anywhere in the machine, and source codes will be downloaded in the same folder. 
 * The script is made for Ubuntu 20.04 64-bit. 
+* The files ending with `_old` are previous versions of the installer; Karma is installed separate from the other softwares (using the `karma_old.sh`. 
 
 ## Softwares included in the script:
 * Miriad https://www.atnf.csiro.au/computing/software/miriad/
 * Duchamp https://www.atnf.csiro.au/people/Matthew.Whiting/Duchamp/
 * RPFITS https://www.atnf.csiro.au/computing/software/rpfits.html
 * WCSLIB https://www.atnf.csiro.au/people/mcalabre/WCS/wcslib/
-* ~~Karma https://www.atnf.csiro.au/computing/software/karma/~~
 * CFITSIO https://heasarc.gsfc.nasa.gov/fitsio/
+* Karma https://www.atnf.csiro.au/computing/software/karma/
 * Other modules: 
   * `pgplot5`
   * `gfortran`
