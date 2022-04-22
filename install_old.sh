@@ -24,12 +24,12 @@ tar -zxvf Duchamp-1.6.2.tar.gz
 echo "Installing RPFITS..."
 cd rpfits/linux64
 make
-sudo make install
+sudo make install # PREFIX=$INSTALLDIR/miriad/linux64
 cd $HOMEDIRECTORY
 
 echo "Installing WCSLIB..."
 cd wcslib-7.7
-./configure
+./configure # --prefix=$INSTALLDIR/miriad/linux64
 make
 sudo mkdir /usr/local/share/man/man1
 sudo make install
@@ -44,20 +44,20 @@ sudo tar -jxvf miriad-common.tar.bz2
 export MIR=$INSTALLDIR/miriad
 export MIRARCH=linux64
 cd $MIR
-sudo ./configure
+sudo ./configure 
 sudo make
 cd $HOMEDIRECTORY
 
 echo "Installing CFITSIO..."
 cd cfitsio-4.0.0
-./configure --prefix=$INSTALLDIR
+./configure # --prefix=$INSTALLDIR/miriad/linux64
 make
-sudo make install
+sudo make install 
 cd $HOMEDIRECTORY
 
 echo "Installing Duchamp..."
 cd Duchamp-1.6.2
-./configure
+./configure # --prefix=$INSTALLDIR/miriad/linux64
 make
 sudo make install
 
