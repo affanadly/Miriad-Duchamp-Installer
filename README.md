@@ -78,6 +78,7 @@ This is a bash script intended to install ATNF's Miriad radio interferometry dat
      -v           Return version number and exit
      -h           Display this help information and exit
    ```
+   and to test Karma, run `kvis` and the KVis GUI should appear.
 
 ## Disclaimer:
 I do not own any of the softwares involved in the script. The copyrights and licenses of every software involved can be found at their respective homepages. This is written just to ease the installation process of these softwares.
