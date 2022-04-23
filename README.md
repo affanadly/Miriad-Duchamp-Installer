@@ -8,7 +8,7 @@ This is a bash script intended to install ATNF's Miriad radio interferometry dat
 * Internet access is required to download the source codes. 
 * The script can be placed anywhere in the machine, and source codes will be downloaded in the same folder. 
 * The script is made for Ubuntu 20.04 64-bit. 
-* The files ending with `_old` are previous versions of the installer; Karma is installed separate from the other softwares (using the `karma_old.sh`. 
+* The files ending with `_old` are previous versions of the installer; Karma is installed separate from the other softwares (using the `karma_old.sh`). 
 
 ## Softwares included in the script:
 * Miriad https://www.atnf.csiro.au/computing/software/miriad/
