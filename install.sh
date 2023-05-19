@@ -5,7 +5,7 @@ INSTALLDIR=/usr/local
 
 echo "Installing apt pre-requisites..."
 sudo apt-get update
-sudo apt-get -y install pgplot5 gfortran autoconf git csh xorg openbox libxaw7-dev libreadline-dev build-essential zlib1g-dev
+sudo apt-get -y install pgplot5 gfortran gfortran-9 autoconf git csh xorg openbox libxaw7-dev libreadline-dev build-essential zlib1g-dev
 
 echo "Downloading source codes..."
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/rpfits/rpfits-2.25.tar.gz
@@ -27,16 +27,16 @@ tar -jxvf karma-1.7.25-common.tar.bz2
 
 echo "Installing RPFITS..."
 cd rpfits/linux64
-make
-sudo make install # PREFIX=$INSTALLDIR/miriad/linux64
+make FC=gfortran-9
+sudo make install FC=gfortran-9 # PREFIX=$INSTALLDIR/miriad/linux64
 cd $HOMEDIRECTORY
 
 echo "Installing WCSLIB..."
 cd wcslib-7.7
 ./configure # --prefix=$INSTALLDIR/miriad/linux64
-make
+make FC=gfortran-9
 sudo mkdir /usr/local/share/man/man1
-sudo make install
+sudo make install FC=gfortran-9
 cd $HOMEDIRECTORY
 
 echo "Installing Miriad..."
@@ -49,21 +49,21 @@ export MIR=$INSTALLDIR/miriad
 export MIRARCH=linux64
 cd $MIR
 sudo ./configure 
-sudo make
+sudo make FC=gfortran-9
 cd $HOMEDIRECTORY
 
 echo "Installing CFITSIO..."
 cd cfitsio-4.0.0
 ./configure --prefix=$INSTALLDIR
-make
-sudo make install 
+make FC=gfortran-9
+sudo make install FC=gfortran-9
 cd $HOMEDIRECTORY
 
 echo "Installing Duchamp..."
 cd Duchamp-1.6.2
 ./configure # --prefix=$INSTALLDIR/miriad/linux64
-make
-sudo make install
+make FC=gfortran-9
+sudo make install FC=gfortran-9
 cd $HOMEDIRECTORY
 
 echo "Installing Karma"
@@ -74,13 +74,13 @@ cd $HOMEDIRECTORY
 
 echo "Removing temporary files..."
 cd $INSTALLDIR
-sudo rm -r -f miriad-code.tar.bz2
-sudo rm -r -f miriad-common.tar.bz2
+sudo rm -rf miriad-code.tar.bz2
+sudo rm -rf miriad-common.tar.bz2
 cd $HOMEDIRECTORY
-rm -r -f wcslib-7.7
-rm -r -f rpfits
-rm -r -f cfitsio-4.0.0
-rm -r -f Duchamp-1.6.2
+rm -rf wcslib-7.7
+rm -rf rpfits
+rm -rf cfitsio-4.0.0
+rm -rf Duchamp-1.6.2
 
 echo "Adding to PATH..."
 cat << EOF >> ~/.profile
