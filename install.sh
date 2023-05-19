@@ -5,7 +5,7 @@ INSTALLDIR=/usr/local
 
 echo "Installing apt pre-requisites..."
 sudo apt-get update
-sudo apt-get -y install pgplot5 gfortran autoconf git csh xorg openbox libxaw7-dev libreadline-dev build-essential zlib1g-dev
+sudo apt-get -y install pgplot5 gfortran gfortran-9 autoconf git csh xorg openbox libxaw7-dev libreadline-dev build-essential zlib1g-dev
 
 echo "Downloading source codes..."
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/rpfits/rpfits-2.25.tar.gz
@@ -27,7 +27,7 @@ tar -jxvf karma-1.7.25-common.tar.bz2
 
 echo "Installing RPFITS..."
 cd rpfits/linux64
-make
+make FC=gfortran-9
 sudo make install # PREFIX=$INSTALLDIR/miriad/linux64
 cd $HOMEDIRECTORY
 
