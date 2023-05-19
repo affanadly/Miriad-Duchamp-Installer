@@ -34,9 +34,9 @@ cd $HOMEDIRECTORY
 echo "Installing WCSLIB..."
 cd wcslib-7.7
 ./configure # --prefix=$INSTALLDIR/miriad/linux64
-make
+make FC=gfortran-9
 sudo mkdir /usr/local/share/man/man1
-sudo make install
+sudo make install FC=gfortran-9
 cd $HOMEDIRECTORY
 
 echo "Installing Miriad..."
@@ -49,21 +49,21 @@ export MIR=$INSTALLDIR/miriad
 export MIRARCH=linux64
 cd $MIR
 sudo ./configure 
-sudo make
+sudo make FC=gfortran-9
 cd $HOMEDIRECTORY
 
 echo "Installing CFITSIO..."
 cd cfitsio-4.0.0
 ./configure --prefix=$INSTALLDIR
-make
-sudo make install 
+make FC=gfortran-9
+sudo make install FC=gfortran-9
 cd $HOMEDIRECTORY
 
 echo "Installing Duchamp..."
 cd Duchamp-1.6.2
 ./configure # --prefix=$INSTALLDIR/miriad/linux64
-make
-sudo make install
+make FC=gfortran-9
+sudo make install FC=gfortran-9
 cd $HOMEDIRECTORY
 
 echo "Installing Karma"
@@ -74,13 +74,13 @@ cd $HOMEDIRECTORY
 
 echo "Removing temporary files..."
 cd $INSTALLDIR
-sudo rm -r -f miriad-code.tar.bz2
-sudo rm -r -f miriad-common.tar.bz2
+sudo rm -rf miriad-code.tar.bz2
+sudo rm -rf miriad-common.tar.bz2
 cd $HOMEDIRECTORY
-rm -r -f wcslib-7.7
-rm -r -f rpfits
-rm -r -f cfitsio-4.0.0
-rm -r -f Duchamp-1.6.2
+rm -rf wcslib-7.7
+rm -rf rpfits
+rm -rf cfitsio-4.0.0
+rm -rf Duchamp-1.6.2
 
 echo "Adding to PATH..."
 cat << EOF >> ~/.profile
