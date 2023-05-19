@@ -28,7 +28,7 @@ tar -jxvf karma-1.7.25-common.tar.bz2
 echo "Installing RPFITS..."
 cd rpfits/linux64
 make FC=gfortran-9
-sudo make install # PREFIX=$INSTALLDIR/miriad/linux64
+sudo make install FC=gfortran-9 # PREFIX=$INSTALLDIR/miriad/linux64
 cd $HOMEDIRECTORY
 
 echo "Installing WCSLIB..."
