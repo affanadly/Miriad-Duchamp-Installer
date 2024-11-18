@@ -9,7 +9,7 @@ sudo apt-get -y install pgplot5 gfortran gfortran-9 autoconf git csh xorg openbo
 
 echo "Downloading source codes..."
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/rpfits/rpfits-2.25.tar.gz
-wget -nc ftp://ftp.atnf.csiro.au/pub/software/wcslib/wcslib-tar.bz2
+wget -nc ftp://ftp.atnf.csiro.au/pub/software/wcslib/wcslib.tar.bz2
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/miriad/miriad-code.tar.bz2
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/miriad/miriad-common.tar.bz2
 wget -nc https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-4.5.0.tar.gz
