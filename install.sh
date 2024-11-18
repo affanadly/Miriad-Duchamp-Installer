@@ -19,7 +19,7 @@ wget -nc ftp://ftp.atnf.csiro.au/pub/software/karma/karma-1.7.25-common.tar.bz2
 
 echo "Unpacking source codes..."
 tar -zxvf rpfits-2.25.tar.gz
-tar -jxvf wcslib-8.4.tar.bz2
+tar -jxvf wcslib.tar.bz2
 tar -zxvf cfitsio-4.5.0.tar.gz
 tar -zxvf Duchamp-1.6.2.tar.gz
 tar -jxvf karma-1.7.25-amd64_Linux_libc6.3.tar.bz2
