@@ -9,18 +9,18 @@ sudo apt-get -y install pgplot5 gfortran gfortran-9 autoconf git csh xorg openbo
 
 echo "Downloading source codes..."
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/rpfits/rpfits-2.25.tar.gz
-wget -nc ftp://ftp.atnf.csiro.au/pub/software/wcslib/wcslib-7.7.tar.bz2
+wget -nc ftp://ftp.atnf.csiro.au/pub/software/wcslib/wcslib-tar.bz2
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/miriad/miriad-code.tar.bz2
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/miriad/miriad-common.tar.bz2
-wget -nc https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-4.0.0.tar.gz
+wget -nc https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-4.5.0.tar.gz
 wget -nc https://www.atnf.csiro.au/people/Matthew.Whiting/Duchamp/downloads/Duchamp-1.6.2.tar.gz
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/karma/karma-1.7.25-amd64_Linux_libc6.3.tar.bz2
 wget -nc ftp://ftp.atnf.csiro.au/pub/software/karma/karma-1.7.25-common.tar.bz2
 
 echo "Unpacking source codes..."
 tar -zxvf rpfits-2.25.tar.gz
-tar -jxvf wcslib-7.7.tar.bz2
-tar -zxvf cfitsio-4.0.0.tar.gz
+tar -jxvf wcslib-8.4.tar.bz2
+tar -zxvf cfitsio-4.5.0.tar.gz
 tar -zxvf Duchamp-1.6.2.tar.gz
 tar -jxvf karma-1.7.25-amd64_Linux_libc6.3.tar.bz2
 tar -jxvf karma-1.7.25-common.tar.bz2
@@ -32,7 +32,7 @@ sudo make install FC=gfortran-9 # PREFIX=$INSTALLDIR/miriad/linux64
 cd $HOMEDIRECTORY
 
 echo "Installing WCSLIB..."
-cd wcslib-7.7
+cd wcslib-8.4
 ./configure # --prefix=$INSTALLDIR/miriad/linux64
 make FC=gfortran-9
 sudo mkdir /usr/local/share/man/man1
@@ -53,7 +53,7 @@ sudo make FC=gfortran-9
 cd $HOMEDIRECTORY
 
 echo "Installing CFITSIO..."
-cd cfitsio-4.0.0
+cd cfitsio-4.5.0
 ./configure --prefix=$INSTALLDIR
 make FC=gfortran-9
 sudo make install FC=gfortran-9
@@ -77,13 +77,15 @@ cd $INSTALLDIR
 sudo rm -rf miriad-code.tar.bz2
 sudo rm -rf miriad-common.tar.bz2
 cd $HOMEDIRECTORY
-rm -rf wcslib-7.7
+rm -rf wcslib-8.4
 rm -rf rpfits
-rm -rf cfitsio-4.0.0
+rm -rf cfitsio-4.5.0
 rm -rf Duchamp-1.6.2
 
 echo "Adding to PATH..."
 cat << EOF >> ~/.profile
+export PATH=\$PATH:/usr/local/bin
+export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/usr/local/lib
 
 . $INSTALLDIR/miriad/MIRRC.sh
 export PATH=\$PATH:\$MIRBIN
